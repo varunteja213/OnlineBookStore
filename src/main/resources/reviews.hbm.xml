@@ -1,0 +1,17 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.flm.entity.Reviews" table="reviews">
+		<id name="reviewId" column="review_id">
+			<generator class="increment" />
+		</id>
+		<many-to-one name="user" column="user_id" class="com.flm.entity.Users"/>
+		<many-to-one name="book" column="book_id" class="com.flm.entity.Books"/>
+		<property name="rating" column="rating"/>
+		<property name="reviewText" column="review_text"/>
+		<property name="reviewCreatedAt" column="created_at"/>
+	</class>
+</hibernate-mapping>

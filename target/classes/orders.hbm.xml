@@ -1,0 +1,19 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.flm.entity.Orders" table="orders">
+		<id name="orderId" column="order_id">
+			<generator class="increment" />
+		</id>
+		<many-to-one name="book" column="book_id" class="com.flm.entity.Books"/>
+		<many-to-one name="user" column="user_id" class="com.flm.entity.Users"/>
+		<property name="orderDate" column="order_date"/>
+		<property name="quantity" column="quantity"/>
+		<property name="totalPrice" column="total_amount"/>
+		<property name="ordersStatus" column="status"/>
+		<property name="orderCreatedAt" column="created_at"/>
+	</class>
+</hibernate-mapping>

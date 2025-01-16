@@ -1,0 +1,21 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.flm.entity.Books" table="books">
+		<id name="sbin" column="sbin">
+			<generator class="increment" />
+		</id>
+		<property name="title" column="title"/>
+		<property name="author" column="author"/>
+		<property name="availability" column="availability"/>
+		<property name="bookStatus" column="status"/>
+		<property name="publishedDate" column="published_date"/>
+		<property name="bookCreatedAt" column="created_at"/>
+		<property name="bookUpdatedAt" column="updated_at"/>
+		<property name="price" column="price"/>
+		<property name="category" column="category"/>
+	</class>
+</hibernate-mapping>

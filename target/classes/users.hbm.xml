@@ -1,0 +1,22 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.flm.entity.Users" table="user">
+		<id name="userId" column="user_id">
+			<generator class="increment" />
+		</id>
+		<property name="firstName" column="first_name"/>
+		<property name="lastName" column="last_name"/>
+		<property name="gender" column="gender"/>
+		<property name="dateOfBirth" column="date_of_birth"/>
+		<property name="mobileNumber" column="mobile_number"/>
+		<property name="emailId" column="email_id"/>
+		<property name="username" column="username"/>
+		<property name="password" column="password"/>
+		<property name="userCreatedAt" column="created_at"/>
+		<property name="accountStatus" column="account_status"/>
+	</class>
+</hibernate-mapping>

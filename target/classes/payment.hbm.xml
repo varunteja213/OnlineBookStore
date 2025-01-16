@@ -1,0 +1,15 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.flm.entity.Payment" table="payments">
+		<id name="paymentId" column="payment_id">
+			<generator class="increment" />
+		</id>
+		<many-to-one name="order" column="order_id" class="com.flm.entity.Orders"/>
+		<property name="paymentMethod" column="payment_method"/>
+		<property name="paymentStatus" column="payment_status"/>
+	</class>
+</hibernate-mapping>
