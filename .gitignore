@@ -1,0 +1,45 @@
+# Ignore target folder and compiled files
+target/
+*.class
+
+# Ignore Maven-specific files
+*.log
+*.war
+*.ear
+*.iml
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Ignore STS and Eclipse-specific files
+.classpath
+.project
+.settings/
+.apt_generated/
+.factorypath
+.springBeans
+
+# Ignore IDE-specific files
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Ignore OS-generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Ignore temporary files
+*.bak
+*.swp
+*.tmp
+
+# Ignore Git files
+.gitignore
